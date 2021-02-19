@@ -13,6 +13,7 @@ int main() {
 	
 	Liga* liga;
 	Tabla* tabla;
+	EquipoFutbol* teams;
 	bool principal =true;
 	int op;
 	
@@ -71,39 +72,59 @@ int main() {
                           			Tabla* tabla = new Tabla(); 
                           			tabla->setPuntosEquipo(puntitos);
                           			liga->setTabla(tabla);
+                          			
+                          			cout<< "Equipo creado exitosamente!"<< endl;
 								}//add
 								break;
 							case 2:
-								{//mod
-								bool crud = true;
-								int opmod;
-								while (opmod){
-									cout << "-----------------Menu--------------"<<endl;
-									cout << "1. Modificar nombre"<<endl;
-									cout << "2. Modificar skill"<<endl;
-									cout << "3. Regresar"<<endl;;
-									cout << "-----------------------------------"<<endl;
-									cout << "Ingrese una opcion: " <<endl <<"-> ";
-									cin >> opmod;
-									switch (opmod){
-										case 1:
-										{
-												
-										}
-											break;
-										case 2:
-										{
-											int puntuacion;
-											puntuacion = 0 + rand() % (100);					
-										}
-											break;
-										case 3:
-										{
-											cout << "Regresando...";
-											opmod = false;			
-										}
-											break;
-								}//mod
+								{
+									bool seguire = true;
+									int mod;
+									while(seguire){
+										cout << "-----------------Menu--------------"<<endl;
+										cout << "1. Nombre"<<endl;
+										cout << "2. Skill"<<endl;
+										cout << "3. Regresar"<<endl;
+										cout << "-----------------------------------"<<endl;
+										cout << "Ingrese una opcion: " <<endl <<"-> ";
+										cin >> mod;
+										switch(mod){
+											case 1:
+												{
+													string name;
+													cout << "-----------LISTA DE EQUIPOS --------------" << endl;
+													for(int i=0; i<liga->getEquipos().size(); i++){
+						                                //teams = liga->getEquipos().at(i); 
+						                            }
+						                            
+						                            int indice;
+						                            cout<<"Ingrese el indice: "<<endl << "-> ";  
+						                            cin>>indice; 
+						                            //teams = liga->getEquipos()[indice]; 
+						                            
+						                            cout<<"Ingrese el nuevo nombre: "<<endl << "-> ";  
+				                                    cin>>name; 
+				                                	teams->setNombre(name); 
+				                                	cout<<"Su nuevo nombre de equipo es: "<< name <<endl;
+												}//name
+												break;
+											case 2:
+												{
+													int puntuacion;
+													puntuacion = 0 + rand() % (100);	
+													teams->setPuntuacion(puntuacion);
+													cout<<"Su nuevo skill como equipo es: "<< puntuacion <<endl;
+												}//skill
+												break;
+											case 3:
+												{
+													cout << "Regresando...";
+													seguire = false;		
+												}//regresar
+												break;
+										}//fin del switch mod
+									}//fin de mod resp
+								}//fin de mod
 								break;
 							case 3:
 								{
