@@ -39,6 +39,3 @@ vector<EquipoFutbol>  Liga::getEquipos(){
     return this->equipos; 
 } 
 
-void Liga::erase(int posicion){
-    equipos.erase(begin(equipos)+posicion);
-};

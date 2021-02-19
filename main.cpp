@@ -100,7 +100,7 @@ int main() {
 						                            int indice;
 						                            cout<<"Ingrese el indice: "<<endl << "-> ";  
 						                            cin>>indice; 
-						                            //teams = liga->getEquipos()[indice]; 
+						                            //teams = liga->getEquipos().at(i); 
 						                            
 						                            cout<<"Ingrese el nuevo nombre: "<<endl << "-> ";  
 				                                    cin>>name; 

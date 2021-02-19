@@ -22,7 +22,6 @@ class Liga{
     void setEquipos(EquipoFutbol*);
     void setPartidos(Partidos*);
     void setTabla(Tabla*); 
-    void erase(int posicion);
     
     vector<Partidos> getPartidos();
     vector<EquipoFutbol>  getEquipos(); 
