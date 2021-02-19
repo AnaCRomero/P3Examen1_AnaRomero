@@ -15,9 +15,6 @@ Puntos::Puntos(EquipoFutbol nombre,int Golfavor,int Golcontra,int partidosWon,in
 Puntos::~Puntos(){
 }
 
-EquipoFutbol Puntos::getNombre(){
-	return this->nombre;
-}
 
 int Puntos::getGolFavor(){
 	return this->Golfavor;
@@ -38,4 +35,28 @@ int Puntos::getPartidosLoose(){
 int Puntos::getPartidosTie(){
 	return this->partidosTie;
 }	
+
+void Puntos::setNombre(){
+	this->nombre=nombre;
+}
+		
+void Puntos::setGolFavor(){
+	this->Golfavor=Golfavor;
+}
+	
+void Puntos::setGolContra(){
+	this->Golcontra=Golcontra;
+}
+
+void Puntos::setPartidosWon(){
+	this->partidosWon=partidosWon;
+}
+
+void Puntos::setPartidosLoose(){
+	this->partidosLoose=partidosLoose;
+}
+
+void Puntos::setPartidosTie(){
+	this->partidosTie=partidosTie;
+}
   		

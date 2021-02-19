@@ -10,8 +10,11 @@
 using namespace std;
 
 int main() {
+	
+	
 	bool principal =true;
 	int op;
+	
 	while (principal){
 		cout << "-----------------Menu--------------"<<endl;
 		cout << "1. Mantenimiento de equipos"<<endl;
@@ -40,13 +43,32 @@ int main() {
 						switch (opCrud){
 							case 1:
 								{
+									//nuevo equipo
 									int puntuacion;
 									puntuacion = 0 + rand() % (100);	
 									string name;
 									cout << "Ingrese el nombre del equipo: " << endl << "-> ";
 									cin >> name;
+									cout<<"Su skill como equipo es: "<< puntuacion <<endl;
+									//liga->setEquipos(new EquipoFutbol(name,puntuacion)); 
 									
-									
+									//para la tabla
+									int favor,contra,win,loose,tie;
+		                        	cout<<"Ingrese los goles a favor: "<<endl; 
+		                          	cin>>favor; 
+		                          	cout<<"Ingrese los goles en contra: "<<endl; 
+		                          	cin>>contra; 
+		                          	cout<<"Ingrese los partidos ganados: "<<endl; 
+		                          	cin>>win; 
+		                          	cout<<"Ingrese los partidos perdidos: "<<endl;
+		                          	cin>>loose; 
+		                          	cout<<"Ingrese los partidos empatados: "<<endl; 
+		                          	cin>>tie; 
+		                          	
+		                          	//Puntos* puntosEquipo = new Puntos(name,favor,contra,win,loose,tie));
+                          			//Tabla* tabla = new Tabla(); 
+                          			//tabla->setPuntosEquipo(puntosEquipo);
+                          			//liga->setTabla(tabla);
 								}//add
 								break;
 							case 2:

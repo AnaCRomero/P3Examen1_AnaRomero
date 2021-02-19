@@ -19,18 +19,18 @@ class Puntos{
   		Puntos(EquipoFutbol,int,int,int,int,int);
   		~Puntos();
   		
-  		EquipoFutbol getNombre();
+  		string getNombre();
 		int getGolFavor();
 		int getGolContra();
 		int getPartidosWon();
 		int getPartidosLoose();
 		int getPartidosTie();
 		
-		void getNombre(EquipoFutbol);
-		void getGolFavor(int);
-		void getGolContra(int);
-		void getPartidosWon(int);
-		void getPartidosLoose(int);
-		void getPartidosTie(int);
+		void setNombre();
+		void setGolFavor();
+		void setGolContra();
+		void setPartidosWon();
+		void setPartidosLoose();
+		void setPartidosTie();
 };
 #endif
