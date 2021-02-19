@@ -11,7 +11,8 @@ using namespace std;
 
 int main() {
 	
-	
+	Liga* liga;
+	Tabla* tabla;
 	bool principal =true;
 	int op;
 	
@@ -36,7 +37,7 @@ int main() {
 						cout << "2. Modificar equipo"<<endl;
 						cout << "3. Listar equipo"<<endl;
 						cout << "4. Eliminar equipo"<<endl;
-						cout << "5. Salir"<<endl;
+						cout << "5. Regresar"<<endl;
 						cout << "-----------------------------------"<<endl;
 						cout << "Ingrese una opcion: " <<endl <<"-> ";
 						cin >> opCrud;
@@ -50,7 +51,8 @@ int main() {
 									cout << "Ingrese el nombre del equipo: " << endl << "-> ";
 									cin >> name;
 									cout<<"Su skill como equipo es: "<< puntuacion <<endl;
-									//liga->setEquipos(new EquipoFutbol(name,puntuacion)); 
+									liga->setEquipos(new EquipoFutbol(name,puntuacion)); //los mete a la liga
+									EquipoFutbol team(name,puntuacion);	//variable de paso
 									
 									//para la tabla
 									int favor,contra,win,loose,tie;
@@ -65,15 +67,42 @@ int main() {
 		                          	cout<<"Ingrese los partidos empatados: "<<endl; 
 		                          	cin>>tie; 
 		                          	
-		                          	//Puntos* puntosEquipo = new Puntos(name,favor,contra,win,loose,tie));
-                          			//Tabla* tabla = new Tabla(); 
-                          			//tabla->setPuntosEquipo(puntosEquipo);
-                          			//liga->setTabla(tabla);
+		                          	Puntos* puntitos = new Puntos (team,favor,contra,win,loose,tie);//los mete a la tabla
+                          			Tabla* tabla = new Tabla(); 
+                          			tabla->setPuntosEquipo(puntitos);
+                          			liga->setTabla(tabla);
 								}//add
 								break;
 							case 2:
-								{
-									
+								{//mod
+								bool crud = true;
+								int opmod;
+								while (opmod){
+									cout << "-----------------Menu--------------"<<endl;
+									cout << "1. Modificar nombre"<<endl;
+									cout << "2. Modificar skill"<<endl;
+									cout << "3. Regresar"<<endl;;
+									cout << "-----------------------------------"<<endl;
+									cout << "Ingrese una opcion: " <<endl <<"-> ";
+									cin >> opmod;
+									switch (opmod){
+										case 1:
+										{
+												
+										}
+											break;
+										case 2:
+										{
+											int puntuacion;
+											puntuacion = 0 + rand() % (100);					
+										}
+											break;
+										case 3:
+										{
+											cout << "Regresando...";
+											opmod = false;			
+										}
+											break;
 								}//mod
 								break;
 							case 3:

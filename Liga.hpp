@@ -19,9 +19,9 @@ class Liga{
 	    Liga(string,vector<EquipoFutbol>,vector<Partidos>,vector<Tabla>);
 	    ~Liga(); 
 
-    void setEquipos(EquipoFutbol);
-    void setPartidos(Partidos);
-    void setTabla(Tabla); 
+    void setEquipos(EquipoFutbol*);
+    void setPartidos(Partidos*);
+    void setTabla(Tabla*); 
     void erase(int posicion);
     
     vector<Partidos> getPartidos();

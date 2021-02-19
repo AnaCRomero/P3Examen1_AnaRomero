@@ -14,6 +14,6 @@ vector<Puntos> Tabla::getPuntosEquipo(){
 	return this->puntosEquipo;
 }
 
-void Tabla::setPuntosEquipo(Puntos equipo){
-	puntosEquipo.push_back(equipo);
+void Tabla::setPuntosEquipo(Puntos *equipo){
+	puntosEquipo.push_back(*equipo);
 }

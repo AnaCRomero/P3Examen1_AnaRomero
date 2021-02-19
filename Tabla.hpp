@@ -14,6 +14,6 @@ class Tabla{
 	
 	vector<Puntos> getPuntosEquipo();
 	
-    void setPuntosEquipo(Puntos); 
+    void setPuntosEquipo(Puntos*); 
 };
 #endif

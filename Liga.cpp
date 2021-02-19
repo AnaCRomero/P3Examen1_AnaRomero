@@ -12,16 +12,16 @@ Liga::Liga(string,vector<EquipoFutbol> equipos,vector<Partidos> jornada,vector<T
 Liga::~Liga(){
 }
 
-void Liga::setEquipos(EquipoFutbol e){
-    equipos.push_back(e); 
+void Liga::setEquipos(EquipoFutbol *e){
+    equipos.push_back(*e); 
 }
 
-void Liga::setPartidos(Partidos p){
-    jornada.push_back(p); 
+void Liga::setPartidos(Partidos *p){
+    jornada.push_back(*p); 
 }
    
-void Liga::setTabla(Tabla t){
-    tabla.push_back(t);
+void Liga::setTabla(Tabla *t){
+    tabla.push_back(*t);
 }   
    
    
